@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Home">
+
+    <TextView
+        android:id="@+id/greetingMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Wellcome To Home"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toStartOf="@+id/logout_btn"
+        app:layout_constraintHorizontal_bias="0.261"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/logout_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="48dp"
+        android:background="@drawable/btn_bg"
+        android:hint="Add"
+        android:onClick="logMeout"
+        android:text="Logout"
+        app:layout_constraintBottom_toBottomOf="@+id/greetingMessage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/save_me_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="83dp"
+        android:ems="10"
+        android:paddingLeft="10dp"
+        android:background="@drawable/gradient_bg"
+        android:inputType="textPersonName"
+        android:textColorHint="@android:color/black"
+        android:hint="Enter Text"
+        app:layout_constraintEnd_toStartOf="@+id/save_me"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/greetingMessage" />
+
+    <Button
+        android:id="@+id/save_me"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="17dp"
+        android:background="@drawable/btn_bg"
+        android:text="save"
+        android:onClick="save_to_db"
+        app:layout_constraintBottom_toBottomOf="@+id/save_me_text_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/save_me_text_view"
+        app:layout_constraintTop_toTopOf="@+id/save_me_text_view" />
+
+    <ListView
+        android:id="@+id/list_iview_of_items"
+        android:layout_width="409dp"
+        android:layout_height="559dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/save_me" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="175dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="178dp"
+        android:text="Below Mentioned Data is Retrieved From Database"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/save_me_text_view" />
+</androidx.constraintlayout.widget.ConstraintLayout>
